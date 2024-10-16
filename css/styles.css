@@ -1,0 +1,724 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    user-select: none; /* Esto previene la selección de texto en toda la página */
+
+}
+html{
+    scroll-behavior: smooth;
+}
+p{
+    font-size: 1.2rem;
+}
+.SubtituloColorAmarillo{
+    color: #e1bb13d8;
+}
+body {
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #444;
+    padding: 1rem;
+    text-align: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+/* Estilo del botón en la barra de navegación */
+.nav-button {
+    padding: 10px 20px;
+    background-color: #f04e23;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: #d43d1a;
+}
+/*---------------------------Estilo de imagen principal y el titulo---------------------------------*/
+.hero-section {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.hero-img {
+    position: fixed; /* Fija la imagen en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Ajusta la altura al 100% de la ventana */
+    object-fit: cover; /* Asegura que la imagen cubra todo el área */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    background-attachment: fixed;
+}
+
+.hero-content {
+    border-radius: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.702);
+    background-size: 2%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff; /* Color café */
+    text-shadow: 2px 2px 0 rgb(2, 2, 2), /* Sombra para el efecto de borde amarillo */
+                 4px 4px 0 rgb(37, 35, 32), /* Agrega profundidad al borde */
+                 6px 6px 0 rgb(48, 15, 5); /* Más sombra para el efecto 3D */
+    z-index: 1; /* Asegura que el contenido esté sobre la imagen */
+}
+.hero-content-p-principal{
+    color: #e1bb13d8;
+}
+
+.hero-content h1 {
+    font-size: 5rem; /* Tamaño del título, ajusta según necesites */
+    margin-bottom: 0.5rem;
+    font-weight: bold; /* Hace el texto más destacado */
+}
+
+.hero-content p {
+    font-size: 3rem; /* Ta  maño del párrafo, ajusta según necesites */
+}
+
+section {
+    padding: 2rem;
+    text-align: left;
+}
+
+/* Estilos para el carrusel "NOSOTROS" */
+.sectionNosotros{
+background-color: #333333e7;
+color: white;
+font-size: 2rem;
+text-align: center;
+}
+.ContenedorTexoNosotros{
+    text-align: justify;
+    margin-top: 2%;
+    margin-right: 1%;
+}
+.nosotros{
+    color: #ffffff;
+    font-size: 1rem;
+    display: flex;
+    
+}
+.nosotros h3{
+    font-size: 1.5rem;
+}
+.nosotros p h2{
+    text-align: justify;
+    
+}
+.carousel {
+    max-width: 48rem;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.carousel img {
+    width: 47rem;
+    height: 31rem;
+    border-radius: 8px;
+}
+
+.slick-slide {
+    padding: 10px;
+}
+/*Trancision de las imagenes*/
+.slick-slide img {
+    transition: transform 0.3s ease;
+}
+.slick-slide:hover img {
+    transform: scale(1.05);
+}
+/*----------------------------------*/
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #007BFF;
+    z-index: 1;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+/*_________________________________________________________________________*/
+/*SERVIVIOS*/
+.sectionServicios{
+    background-color: #333333e7;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+}
+.sectionServicios h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.service-item {
+    display: inline-block;
+    margin: 1rem;
+    width: 30%;
+    /*width: auto;*/
+    vertical-align: top;
+}
+
+.service-item img {
+    width: 28rem;
+    height: 25rem;
+}
+/*___________________________________________________________________________*/
+
+/* Estilos para el contenedor de contacto */
+.sectionContacto{
+    background-color: #333333e7;
+}
+.sectionContacto h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+}
+.contact-container {
+    height: auto;/* Ajusta la altura automáticamente */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las columnas */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+.contact-form {
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo para pantallas pequeñas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #81818191;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #e1bb13d8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.5s ease;
+}
+
+.submit-btn:hover {
+    background-color: #f04e23;
+    transform: scale(1.05);
+}
+
+.map {
+    
+    flex: 1;
+    min-width: 300px; /* Ancho mínimo para pantallas pequeñas */
+    text-align: center;
+}
+
+.map iframe {
+    border: none;
+    width: 100%;
+    height: 24rem;
+    border-radius: 10px;
+}
+
+
+
+footer {
+    background-color: #444;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/*Estilo de Iconos Sociales*/
+.social-floating-buttons {
+    position: fixed;
+    top: 400px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.social-floating-buttons a img {
+    opacity: 80%;
+    background-color: #ffffff98;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-floating-buttons a img:hover {
+    opacity: 100%;
+    transform: scale(1.5);
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*
+...........
+@media
+...........
+*/
+
+/*<<<<<<<<  Estilo General  >>>>>>>>>>>*/
+html, body {
+    font-size: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    font-size: 0.9rem; /* Tamaño más pequeño para el footer */
+}
+
+/* Estilo del botón del menú "hamburguesa" */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+/* Estilos para el menú desplegable */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Menú horizontal por defecto */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Color llamativo */
+    font-weight: bold; /* Negrita */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+    text-decoration: none;
+}
+
+/* Mostrar el menú desplegable cuando se activa el botón del menú "hamburguesa" */
+nav ul.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del encabezado */
+    left: 0;
+    width: 100%;
+    background-color: #444;
+}
+
+nav ul.show li {
+    margin: 10px 0;
+}
+
+/* Pantallas grandes (desktops de menos de 1367px) */
+@media (max-width: 1367px) {
+    header {
+        padding: 0.5rem;
+    }
+    body {
+        background-color: #333;
+    }
+    nav ul {
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+    nav ul li {
+        text-align: center;
+        display:block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+    .hero-content{
+        left: 50%;
+    }
+    .hero-content h1 {
+        font-size: 3rem; /* Reducimos el tamaño del título */
+        margin: 2%;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem; /* Reducimos el tamaño del párrafo */
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .hero-img {
+        object-fit: cover;
+        height: 50vh; /* Ajustamos la imagen principal a la mitad de la altura de la pantalla */
+    }
+
+    .nosotros {
+        flex-direction: column; /* Alineamos en una columna los elementos del texto y el carrusel */
+        font-size: 1.5rem;
+        text-align: justify;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .carousel {
+        max-width: 100%; /* Ocupa todo el ancho disponible en las pantallas */
+        margin-top: 1%; /* Ajusta el margen si es necesario */
+    }
+
+    .carousel img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    }
+
+    .sectionServicios .service-item {
+        display: block;
+        width: 100%; /* Los servicios ocupan el 100% del ancho en pantallas pequeñas */
+        margin: 1rem 0;
+
+    }
+    .sectionServicios p{
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: justify;
+    }
+    .service-item img {
+        width: 70%;/*Ajusta las imágenes de los servicios al 70% del contenedor */
+        height: auto;
+    }
+
+    .sectionContacto {
+        padding: 1rem;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Ordena las columnas del formulario y el mapa verticalmente */
+        align-items: center;
+        gap: 20px; /* Ajusta el espacio entre columnas */
+    }
+
+    .contact-form, .map
+    {
+        width: 75%;/* Asegura que el formulario y el mapa ocupen el 100% del ancho disponible */
+    }
+
+    .map iframe{
+        height: 25rem; /* Ajusta la altura del iframe del mapa si es necesario */
+    }
+
+    .social-floating-buttons {
+        top: auto;
+        bottom: 40px;
+        left: 10px;
+        
+    }
+
+    .social-floating-buttons a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+/*Pantallas con menos de 768px*/ 
+@media (max-width: 767px) {
+    
+    nav ul {
+        display: none; /* Oculta el menú por defecto en móviles */
+        flex-direction: column;
+        position:absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #444;
+    }
+
+    nav ul.show {
+        display: flex; /* Muestra el menú cuando la clase 'show' está activa */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+    body {
+        background-color: #333;
+    }
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Reducimos el tamaño del título */
+    }
+
+    .hero-content p {
+        font-size: 1.5rem; /* Reducimos el tamaño del párrafo */
+        text-align: center;
+    }
+
+    .hero-img {
+        object-fit: cover;
+        height: 50vh; /* Ajustamos la imagen principal a la mitad de la altura de la pantalla */
+    }
+
+    .nosotros {
+        flex-direction: column; /* Alineamos en una columna los elementos del texto y el carrusel */
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .carousel {
+        max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+        margin-top: 1%; /* Ajusta el margen si es necesario */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .carousel img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    }
+
+    .sectionServicios .service-item {
+        display: block;
+        width: 100%; /* Los servicios ocupan el 100% del ancho en pantallas pequeñas */
+        margin: 1rem 0;
+    }
+
+    .service-item img {
+        width: 75%; /* Ajusta las imágenes de los servicios al 100% del contenedor */
+        height: auto;
+    }
+
+    .sectionContacto {
+        padding: 1rem;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Ordena las columnas del formulario y el mapa verticalmente */
+        align-items: center;
+        gap: 10px; /* Ajusta el espacio entre columnas */
+    }
+
+    .contact-form, .map,
+    .map iframe {
+        width: 100%;/* Asegura que el formulario y el mapa ocupen el 100% del ancho disponible */
+    }
+    .map iframe{
+        height: 18rem; /* Ajusta la altura del iframe del mapa si es necesario */
+    }
+
+    .social-floating-buttons {
+        top: auto;
+        bottom: 40px;
+        left: 10px;
+        
+    }
+
+    .social-floating-buttons a img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Estilos para pantallas pequeñas con menos de 467px */
+@media (max-width: 467px) {
+
+
+
+    header {
+        padding: 0.5rem;
+    }
+    body {
+        background-color: #333;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .hero-img {
+        object-fit: cover;
+        height: 50vh; /* Ajustamos la imagen principal a la mitad de la altura de la pantalla */
+    }
+    .sectionNosotros h2{
+        font-size: 2rem;
+    }
+    .nosotros {
+        flex-direction: column; /* Alineamos en una columna los elementos del texto y el carrusel */
+        font-size: 1.5rem;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .carousel {
+        max-width: 100%; /* Ocupa todo el ancho disponible en pantallas pequeñas */
+        margin-top: 1%; /* Ajusta el margen si es necesario */
+    }
+
+    .carousel img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    }
+
+    .sectionServicios .service-item {
+        display: block;
+        width: 100%; /* Los servicios ocupan el 100% del ancho en pantallas pequeñas */
+        margin: 1rem 0;
+    }
+    .sectionServicios h2{
+        font-size: 2rem;
+    }
+
+    .service-item img {
+        width: 100%; /* Ajusta las imágenes de los servicios al 100% del contenedor */
+        height: auto;
+    }
+
+    .sectionContacto {
+        padding: 1rem;
+    }
+    .sectionContacto h2{
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        flex-direction: column; /* Ordena las columnas del formulario y el mapa verticalmente */
+        align-items: center;
+        gap: 10px; /* Ajusta el espacio entre columnas */
+    }
+
+    .contact-form, .map,
+    .map iframe {
+        width: 100%;/* Asegura que el formulario y el mapa ocupen el 100% del ancho disponible */
+    }
+    .map iframe{
+        height: 18rem; /* Ajusta la altura del iframe del mapa si es necesario */
+    }
+
+    .social-floating-buttons {
+        top: auto;
+        bottom: 40px;
+        left: 10px;
+        
+    }
+
+    .social-floating-buttons a img {
+        width: 30px;
+        height: 30px;
+    }
+    .footer{
+        font-size: 0,5rem;
+    }
+}
